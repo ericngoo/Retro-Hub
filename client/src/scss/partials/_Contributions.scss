@@ -1,0 +1,16 @@
+.contributions-container {
+    width: 100%;
+    margin: 1.5em 0;
+}
+
+.chart-flex {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 850px) {
+    .contributions-container {
+        margin: 0.5em auto;
+        width: 90%;
+    }   
+}

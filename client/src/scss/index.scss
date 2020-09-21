@@ -1,0 +1,68 @@
+@font-face {
+  src: url(../fonts/3Dventure.ttf);
+  font-family: '3dventure';
+  font-style: normal;
+}
+
+@font-face {
+  src: url(../fonts/Glitch0.ttf);
+  font-family: 'glitch';
+  font-style: normal;
+}
+
+@import 'config';
+@import './partials/All';
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $primary-black;
+  background-image: url("../images/RetroHub-Background.gif");
+  
+}
+
+.dotted-background {
+  background:
+		linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+		linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+		$dot-color;
+	background-size: $dot-space $dot-space;
+}
+
+a {
+  text-decoration: none;
+  color: none;
+
+  &:link {
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: $primary-black;
+  }
+
+  &:hover {
+    color: $primary-black;
+  }
+}
+
+.floating {  
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  from { transform: translate(0,  0px); }
+  50%  { transform: translate(0, -10px); }
+  to   { transform: translate(0, -0px); }    
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    background-image: url("../images/RetroHub-Background_min.gif");
+  }
+}

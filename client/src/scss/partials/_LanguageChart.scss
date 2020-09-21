@@ -1,0 +1,16 @@
+.lang-chart-container {
+    width: 100%;
+    margin: 2em 0;
+}
+
+.chart-flex {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 850px) {
+    .lang-chart-container {
+        margin: 0.5em auto;
+        width: 90%;
+    }   
+}

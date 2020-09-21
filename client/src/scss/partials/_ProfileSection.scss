@@ -1,0 +1,166 @@
+.profile-container {
+    width: 100%;
+    margin: 1em 0;
+}
+
+
+.profile-flex {
+    font-family: 'glitch';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .profile-pic {
+        flex: 1;
+        
+        img {
+            width: 80%;
+            min-width: 70px;
+            margin-left: 1em;
+        }
+
+        &:hover {
+            cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
+        }
+    }
+
+    .profile-info {
+        flex: 1;
+        display: flex;
+        padding-left: 3em;
+
+        & .left-side {
+            margin: 0 auto;
+
+            .right {
+                padding-left: 1em;
+            }
+        }
+    }
+}
+
+.pxl-border {
+    background: $primary-white;
+    box-shadow:     
+    //   /* Inner Border */
+    //    -2px  0   0   0   $primary-white,
+    //     2px  0   0   0   $primary-white,
+    //     0   -2px 0   0   $primary-white,
+    //     0    2px 0   0   $primary-white,
+    //     0  -2px 0  -2px $primary-white,
+    //     0   2px 0  -2px $primary-white,
+    //     0  -2px 0  -4px $primary-white,
+    //     0   2px 0  -4px $primary-white,
+    //     0  -2px 0  -8px $primary-white,
+    //     0   2px 0  -8px $primary-white,
+    //     0  -2px 0 -12px $primary-white,
+    //     0   2px 0 -12px $primary-white,
+      
+      /* Middle Border -- Accent */
+       -4px  0   0   0   $primary-white,
+        4px  0   0   0   $primary-white,
+        0   -4px 0   2px $primary-white,
+        0    4px 0   2px $primary-white,
+        0   -4px 0   0px $primary-white,
+        0    4px 0   0px $primary-white,
+        0  -4px 0  -2px $primary-white,
+        0   4px 0  -2px $primary-white,
+        0  -4px 0  -4px $primary-white,
+        0   4px 0  -4px $primary-white,
+        0  -4px 0  -8px $primary-white,
+        0   4px 0  -8px $primary-white,
+        0  -4px 0 -12px $primary-white,
+        0   4px 0 -12px $primary-white,
+      
+    //   /* Outer Border */
+    //    -6px  0   0   0   $primary-white,
+    //     6px  0   0   0   $primary-white,
+    //     0    0   0   4px $primary-white,
+    //     0   -6px 0   2px $primary-white,
+    //     0    6px 0   2px $primary-white,
+    //     0  -6px 0   0   $primary-white,
+    //     0   6px 0   0   $primary-white,
+    //     0  -6px 0  -2px $primary-white,
+    //     0   6px 0  -2px $primary-white,
+    //     0  -6px 0  -4px $primary-white,
+    //     0   6px 0  -4px $primary-white,
+    //     0  -6px 0  -8px $primary-white,
+    //     0   6px 0  -8px $primary-white,
+    //     0  -6px 0 -12px $primary-white,
+    //     0   6px 0 -12px $primary-white;
+}
+
+
+@media screen and (max-width: 1130px) {
+    .profile-flex {
+        p {
+            //font-size: 1rem;
+        }
+
+        .profile-info {
+            padding-left: 0.75em;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .profile-container {
+        margin: 0.5em auto;
+        width: 90%;
+    }   
+
+    .profile-flex {
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        .profile-pic {
+        
+            img {
+                width: 70%;
+                margin-left: 2em;            
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .profile-flex {
+
+        p {
+            font-size: 1rem;
+        }
+
+        .profile-pic {
+        
+            img {
+                margin-left: 2em;            
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .profile-flex {
+        
+        .profile-info {
+            padding-left: 0;
+        }
+    }
+
+    .profile-pic {
+        
+        img {
+            margin-left: 0;            
+        }
+    }
+}
