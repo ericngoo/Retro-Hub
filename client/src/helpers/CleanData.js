@@ -1,10 +1,7 @@
 export function cleanData(data) {
-    //console.log(Object.values(data.data));
+    
     let lastYear = (new Date().getFullYear() - 1).toString();
     let currentYear = (new Date().getFullYear()).toString();
-
-    // console.log(lastYear);
-    // console.log(currentYear);
 
     let arrayObj = Object.values(data.data);
 
@@ -18,18 +15,10 @@ export function cleanData(data) {
        pastYearKeys[i] = pastYearKeys[i] + "/" + lastYear;
    }
 
-   for(var i = 0; i < currYearKeys.length; i++) {
-    currYearKeys[i] = currYearKeys[i] + "/" + currentYear;
-}
+   for(i = 0; i < currYearKeys.length; i++) {
+        currYearKeys[i] = currYearKeys[i] + "/" + currentYear;
+    }  
 
-    
-
-    // console.log("past year");
-    // console.log(pastYearKeys);
-
-    // console.log("current year");
-    // console.log(currYearKeys);
-    
     let pastYearArrVal = [];
     let currentYearArrVal = [];
 
@@ -40,20 +29,9 @@ export function cleanData(data) {
     currYearValues.forEach((month) => {
         currentYearArrVal.push(Object.values(month).reduce((a,b) => a + b));
     })
-
-    // console.log("past year total");
-    // console.log(pastYearArrVal);
-    // console.log("current year total");
-    // console.log(currentYearArrVal);
-
+   
     let labels = pastYearKeys.concat(currYearKeys);
     let labelData = pastYearArrVal.concat(currentYearArrVal);
-
-    // console.log("labels:");
-    // console.log(labels);
-
-    // console.log("labelData: ");
-    // console.log(labelData);
 
     return {labels: labels, labelData: labelData};
 }
