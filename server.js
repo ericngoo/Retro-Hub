@@ -16,10 +16,6 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get("/", (req, res) => {
-    res.send("HELL YA")
-})
-
 app.get('/:user/:format', (req, res, next) => {
     console.log("inside request");
     const { format, user } = req.params;
