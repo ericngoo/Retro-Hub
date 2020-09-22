@@ -18,13 +18,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //serve static assets if in production!
 if(process.env.NODE_ENV === 'production') {
-  console.log("AM I IN PRODUCTION?");
   //Set the static folder after react build
   app.use(express.static(path.join(__dirname, 'client/build')));
 }
 
 app.get('/:user/:format', (req, res, next) => {
-    console.log("inside request");
     const { format, user } = req.params;
   
     // Render 400 if invalid format given
@@ -83,10 +81,11 @@ app.get('/:user/:format', (req, res, next) => {
     res.json({ message: err.message });
   });
 
-app.get('/*', (req, res) => {
-  console.log("AM I IN ANY GET REQUEST??");
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
+  //redirects all ambiguous routes to index.html from react build!!
+  app.get('/*', (req, res) => {
+    console.log("AM I IN ANY GET REQUEST??");
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
 
 const port = process.env.PORT || 5000;
 

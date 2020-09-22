@@ -87,6 +87,9 @@ function MainPage() {
     })
   }
 
+  function openPersonalSite() {
+    window.open('https://ericngoo.github.io/', '_blank');
+  }
   
 
   useEffect(() => {
@@ -123,7 +126,10 @@ function MainPage() {
             </div>
           </section>
           <div className="footer">
-            <img src={process.env.PUBLIC_URL+"/assets/Copyright.png"} alt="copyright"/>
+            <div onClick={openPersonalSite} className="nes-container is-rounded" style={{backgroundColor: "#fff", borderColor: "hotpink"}}>
+              <p>Copyright (C) ericngoo Inc 2020.</p>
+              <p>All Rights Reserved</p>
+            </div>
           </div>
         </div>
         )}

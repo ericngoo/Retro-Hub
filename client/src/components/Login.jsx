@@ -5,14 +5,14 @@ function Login(props) {
     const [user, setUser] = useState("");
     
     function handlechange(event) {
-        setUser(event.target.value)
+        setUser(event.target.value);
     }
 
     function handleClick() {
         if(user === "") {
             document.getElementById('dialog-dark-rounded').showModal();
         } else {
-            props.handleLogin(user)
+            props.handleLogin(user);
         }
     }
 
@@ -21,7 +21,7 @@ function Login(props) {
             if(user === "") {
                 
             } else {
-                props.handleLogin(user)
+                props.handleLogin(user);
             }
         }
     }

@@ -18,7 +18,7 @@ function Acknowledgment() {
     }
 
     function openMe() {
-        window.open('https://github.com/ericngoo', '_blank');
+        window.open('https://github.com/ericngoo/Retro-Hub', '_blank');
     }
 
 
@@ -41,7 +41,7 @@ function Acknowledgment() {
                     </p>
                     <p onClick={openChartJS}>
                         <span> <i className="nes-icon is-small heart"></i> </span>
-                        ChartJs
+                        Chart.js
                     </p>
                     <p onClick={openNesCSS}>
                         <span> <i className="nes-icon is-small heart"></i> </span>
