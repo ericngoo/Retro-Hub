@@ -81,7 +81,6 @@ app.get('/:user/:format', (req, res, next) => {
 
   //redirects all ambiguous routes to index.html from react build!!
   app.get('/*', (req, res) => {
-    console.log("AM I IN ANY GET REQUEST??");
     res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
   });
 
