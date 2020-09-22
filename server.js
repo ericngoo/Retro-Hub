@@ -1,7 +1,5 @@
 /*
-    Author: Eric Bauerfeld
-    Github: Didericis
-    Repository: github-contributions-api
+    Route to serve contribution data via web scraping was copied from Eric Baurfeld (github account: Didericis)
 */
 
 const express = require('express');
