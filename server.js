@@ -78,17 +78,18 @@ app.get('/:user/:format', (req, res, next) => {
 
 //serve static assets if in production!
 if(process.env.NODE_ENV === 'production') {
+  console.log("AM I IN PRODUCTION?");
   //Set the static folder after react build
-  app.use(express.static('client/build'));
+  app.use(express.static(path.join(__dirname, 'client/build')));
 
-  app.get('*', (req, res) => {
-    console.log("DO I GET IN HERE?");
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  app.get('/*', (req, res) => {
+    console.log("AM I IN ANY GET REQUEST??");
+    res.sendFile(path.resolve(__dirname + '/client/build/index.html'));
   });
 }
 
 const port = process.env.PORT || 5000;
 
 app.listen(port, function () {
-  console.log("Server started successfully on port 5000!");
+  console.log("Server started successfully on port " + port + "!");
 });
