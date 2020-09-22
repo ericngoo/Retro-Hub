@@ -81,7 +81,8 @@ app.get('/:user/:format', (req, res, next) => {
 
   //redirects all ambiguous routes to index.html from react build!!
   app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+    console.log("Do i ever get in here?");
+    res.sendFile(path.join(__dirname, 'client/build/index.html'));
   });
 
 const port = process.env.PORT || 5000;
