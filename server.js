@@ -21,6 +21,7 @@ if(process.env.NODE_ENV === 'production') {
 }
 
 app.get('/:user/:format', (req, res, next) => {
+  console.log("inside /user/count");
     const { format, user } = req.params;
   
     // Render 400 if invalid format given
@@ -80,7 +81,7 @@ app.get('/:user/:format', (req, res, next) => {
   });
 
   //redirects all ambiguous routes to index.html from react build!!
-  app.get('/*', (req, res) => {
+  app.get('*', (req, res) => {
     console.log("Do i ever get in here?");
     res.sendFile(path.join(__dirname, 'client/build/index.html'));
   });
