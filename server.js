@@ -68,6 +68,12 @@ app.post('/contributions', (req, res, next) => {
       res.send({ data });
     });
   });
+
+  //redirects all ambiguous routes to index.html from react build!!
+  app.get('*', (req, res) => {
+    console.log("Do i ever get in here?");
+    res.sendFile(path.join(__dirname, 'client/build/index.html'));
+  });
   
   // catch 404 and forward to error handler
   app.use(function(req, res, next) {
@@ -80,12 +86,6 @@ app.post('/contributions', (req, res, next) => {
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.json({ message: err.message });
-  });
-
-  //redirects all ambiguous routes to index.html from react build!!
-  app.get('*', (req, res) => {
-    console.log("Do i ever get in here?");
-    res.sendFile(path.join(__dirname, 'client/build/index.html'));
   });
 
 const port = process.env.PORT || 5000;
