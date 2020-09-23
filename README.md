@@ -5,9 +5,11 @@ A React application for viewing a user's Github Profile within a Retro-themed wr
 ## Project Screen Shots
 
 
-![Image of Home Page](https://github.com/ericngoo/MERN---Note-Keeper-App/blob/master/LoginPage.jpg)
+![Image of Home Page](https://github.com/ericngoo/Retro-Hub/blob/master/github_assets/home_screen.jpg)
 
-![Image of Profile Page](https://github.com/ericngoo/MERN---Note-Keeper-App/blob/master/MainPage.jpg)
+![Image of Profile Page](https://github.com/ericngoo/Retro-Hub/blob/master/github_assets/profile_screen.jpg)
+
+![Image of Background](https://github.com/ericngoo/Retro-Hub/blob/master/github_assets/RetroHub-Background.gif)
 
 ## Installation and Setup Instructions
 
