@@ -1,5 +1,5 @@
 /*
-    Route to serve contribution data via web scraping was copied from Eric Baurfeld (github account: Didericis)
+    Code to web scrape contribution data from github was copied from Eric Baurfeld (github account: Didericis)
 */
 
 const express = require('express');
@@ -20,9 +20,11 @@ if(process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')));
 }
 
-app.get('/:user/:format', (req, res, next) => {
-  console.log("inside /user/count");
-    const { format, user } = req.params;
+app.post('/contributions', (req, res, next) => {
+    console.log("inside /user/count");
+        
+    let format = req.body.format;
+    let user = req.body.user;
   
     // Render 400 if invalid format given
     const VALID_FORMATS = ['activity', 'count'];
@@ -63,7 +65,7 @@ app.get('/:user/:format', (req, res, next) => {
       }, {});
   
       // Render parsed contributions data
-      res.json({ data });
+      res.send({ data });
     });
   });
   

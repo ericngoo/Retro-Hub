@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import Chart from 'chart.js';
 import { cleanData } from '../helpers/CleanData';
 
+import axios from 'axios';
+
 function Contributions(props) {
 
     function createContributionChart(data) {
@@ -38,21 +40,33 @@ function Contributions(props) {
         })
     }
 
-    function getContributionData() {
-    
-        const URL = '/' + props.user + '/count';
-        fetch(URL)
+    async function getContributionData() {
+        await axios.post("/contributions", {user: props.user, format: "count"})
         .then((response) => {
-          return response.json();
+            console.log(response.data);
+            return response.data;
         })
         .then((data) => {
-          createContributionChart(data);
+            console.log(data);
+            createContributionChart(data);
         })
         .catch(error => {
-          console.log(error);
+            console.log(error);
         });
     
-      }
+        // const URL = '/' + props.user + '/count';
+        // fetch(URL)
+        // .then((response) => {
+        //   return response.json();
+        // })
+        // .then((data) => {
+        //   createContributionChart(data);
+        // })
+        // .catch(error => {
+        //   console.log(error);
+        // });
+    
+    }
 
     useEffect(() => {
         if (!props.orgStatus) {
