@@ -52,20 +52,7 @@ function Contributions(props) {
         })
         .catch(error => {
             console.log(error);
-        });
-    
-        // const URL = '/' + props.user + '/count';
-        // fetch(URL)
-        // .then((response) => {
-        //   return response.json();
-        // })
-        // .then((data) => {
-        //   createContributionChart(data);
-        // })
-        // .catch(error => {
-        //   console.log(error);
-        // });
-    
+        });    
     }
 
     useEffect(() => {
