@@ -4,9 +4,6 @@ View your Gihub Profile in a Retro-themed wrapper! Built with React :)
 
 ## Project Screen Shots
 
-
-![Image of Home Page](https://github.com/ericngoo/Retro-Hub/blob/master/github_assets/home_screen.jpg)
-
 ![Image of Profile Page](https://github.com/ericngoo/Retro-Hub/blob/master/github_assets/profile_screen.jpg)
 
 ![Image of Background](https://github.com/ericngoo/Retro-Hub/blob/master/github_assets/RetroHub-Background.gif)
