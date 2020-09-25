@@ -36,5 +36,3 @@ writing code, I got very familiar with Adobe Photoshop 2020 and Adobe XD, and de
 
 This application was bootstrapped with the `create-react-app` boilerplate to handle the initial setup for me. But the final list of technologies used in my project are: 
 React, Axios, Body-Parser, Chart.js, Cheerio, Concurrently, Express, Github REST API, GitHub Polyglot, Lodash, Ness.css, Node-Sass, and Request. (Hosted on Heroku 😎)
-
-## 
